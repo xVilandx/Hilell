@@ -11,5 +11,9 @@ while go_game:
     if str(tmp_value) == value:
         go_game = False
         print('Угадал')
+    elif str(tmp_value) > value:
+        print('Попробуй больше')
+    elif str(tmp_value) < value:
+        print('Попробуй меньше')
 
 # ДЗ* Давать подсказки типа: Попробуй больше или именьше
