@@ -58,7 +58,7 @@ print(sum_number_my_str)
 my_str = 'Это "как буд-то" ну ооооочень длииииинаааая строка'
 l_symbol = 'н'
 r_symbol = 'о'
-print(my_str[my_str.find(l_symbol)+1:my_str.rfind(r_symbol)])
+sub_str = my_str[my_str.find(l_symbol)+1:my_str.rfind(r_symbol)]
 
 ###########################################
 

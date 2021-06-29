@@ -1,5 +1,5 @@
-my_list = [1, 2, 3, 4, 5, 6]
-new_list = my_list.copy()[1:]
-new_list.append(my_list[0])
-
-print(new_list)
+my_str = 'Это "как буд-то" ну ооооочень длииииинаааая строка'
+l_symbol = 'н'
+r_symbol = 'о'
+sub_str = my_str[my_str.find(l_symbol)+1:my_str.rfind(r_symbol)]
+print(sub_str)
