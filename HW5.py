@@ -1,6 +1,7 @@
 # 1
 my_number = 6452341053015813000480130000
-print(str(my_number).count('0'))
+zero = 0
+print(str(my_number).count(str(zero)))
 
 ###########################################
 
