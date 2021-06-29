@@ -1,10 +1,6 @@
 # 1
-my_number = 645234105301581300048013
-zero = 0
-for symbol in str(my_number):
-    if symbol == '0':
-        zero += 1
-print(zero)
+my_number = 6452341053015813000480130000
+print(str(my_number).count('0'))
 
 ###########################################
 
@@ -31,12 +27,10 @@ for index, symbol in enumerate(my_list_2):
 
 # 4
 my_list = [1, 2, 3, 4, 5, 6]
-new_list = []
-for index, symbol in enumerate(my_list):
-    if index > 0:
-        new_list.append(symbol)
-
+new_list = my_list[1:]
 new_list.append(my_list[0])
+
+print(new_list)
 
 ##########################################
 
@@ -63,20 +57,7 @@ print(sum_number_my_str)
 my_str = 'Это "как буд-то" ну ооооочень длииииинаааая строка'
 l_symbol = 'н'
 r_symbol = 'о'
-index_l_symbol = 0
-index_r_symbol = 0
-sub_str = ''
-
-for symbol in range(len(my_str)):
-    if l_symbol == my_str[symbol]:
-        index_l_symbol = symbol + 1
-        break
-
-for symbol in range(len(my_str)):
-    if r_symbol == my_str[symbol]:
-        index_r_symbol = symbol
-
-sub_str = my_str[index_l_symbol:index_r_symbol]
+print(my_str[my_str.find(l_symbol)+1:my_str.rfind(r_symbol)])
 
 ###########################################
 
