@@ -28,7 +28,7 @@ for index, symbol in enumerate(my_list_2):
 
 # 4
 my_list = [1, 2, 3, 4, 5, 6]
-new_list = my_list.copy()[1:]
+new_list = my_list[1:]
 new_list.append(my_list[0])
 
 print(new_list)
@@ -79,8 +79,8 @@ while my_number < len(my_str):
 # 9
 my_list = [1, 5, 3, 9, 5, 4, 6, 9, 2, 0, 5, 7, 1]
 happy_numbers = 0
-for index in range(len(my_list)):
-    if my_list[index] > my_list[index-1] + my_list[(index+1) % len(my_list)]:
+for index in range(1, len(my_list) - 1):
+    if my_list[index] > my_list[index-1] + my_list[index+1]:
         happy_numbers += 1
 
 print(happy_numbers)
