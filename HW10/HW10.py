@@ -1,16 +1,16 @@
-# 1 task
-# def create_list_domains(file_name):
-#     with open(file_name, 'r') as txt_file:
-#         return txt_file.read().replace('.', '').split('\n')
-#
-#
-# 2 task
-# def create_list_surname(file_name):
-#     with open(file_name, 'r') as txt_file:
-#         return txt_file.read().split('\t')[1::3]
-#
-#
-# 3 task
+#1 task
+def create_list_domains(file_name):
+    with open(file_name, 'r') as txt_file:
+        return txt_file.read().replace('.', '').split('\n')
+
+
+#2 task
+def create_list_surname(file_name):
+    with open(file_name, 'r') as txt_file:
+        return txt_file.read().split('\t')[1::3]
+
+
+#3 task
 def create_list_date(file_name):
     with open(file_name, 'r') as txt_file:
         list_date = [my_str[0:my_str.find('-')-1] for my_str in txt_file.read().split('\n') if my_str.count('-') > 0]
@@ -34,8 +34,12 @@ def modified_date(file_name):
             if value.isdigit():
                 my_string += '/' + value
         modified_list_date.append(my_string)
-    print(modified_list_date)
+    return modified_list_date
 
 
-lololo = modified_date('authors.txt')
-print(lololo)
+def create_dict(file_name):
+    full_list_date = []
+    for value in range(len(create_list_date(file_name))):
+        my_dict = dict(date_original=create_list_date(file_name)[value], date_modified=modified_date(file_name)[value])
+        full_list_date.append(my_dict)
+    return full_list_date
