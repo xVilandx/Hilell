@@ -1,13 +1,13 @@
 #1 task
-# def create_list_domains(file_name):
-#     with open(file_name, 'r') as txt_file:
-#         return txt_file.read().replace('.', '').split('\n')
-#
-#
-# #2 task
-# def create_list_surname(file_name):
-#     with open(file_name, 'r') as txt_file:
-#         return txt_file.read().split('\t')[1::3]
+def create_list_domains(file_name):
+    with open(file_name, 'r') as txt_file:
+        return txt_file.read().replace('.', '').split('\n')
+
+
+#2 task
+def create_list_surname(file_name):
+    with open(file_name, 'r') as txt_file:
+        return txt_file.read().split('\t')[1::3]
 
 
 #3 task
