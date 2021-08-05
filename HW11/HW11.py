@@ -1,26 +1,26 @@
 import json
 
 
-def read_file(file_name):
-    with open(file_name, 'r') as json_file:
+def read_file(file_json):
+    with open(file_json, 'r') as json_file:
         return json.load(json_file)
 
 
-def sort_by_surname(file_name):
-    surname = file_name['name']
+def sort_by_surname(list_authors):
+    surname = list_authors['name']
     if len(surname) > 1:
         surname = surname.split(' ')
         surname = surname[len(surname)-1]
     return surname
 
 
-def sort_by_death(file_name):
-    my_date = [int(value) for value in file_name['years'].strip('.').split() if value.isdigit()]
-    return -min(my_date) if 'BC' in file_name['years'] else max(my_date)
+def sort_by_death(list_authors):
+    my_date = [int(value) for value in list_authors['years'].strip('.').split() if value.isdigit()]
+    return -min(my_date) if 'BC' in list_authors['years'] else max(my_date)
 
 
-def sort_by_len_text(file_name):
-    return len([my_str for my_str in file_name['text'].split()])
+def sort_by_len_text(list_authors):
+    return len([my_str for my_str in list_authors['text'].split()])
 
 
 # 1 task
