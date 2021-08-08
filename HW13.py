@@ -10,7 +10,7 @@ class _Unit:
         self.agility = 1
         self.intelligence = 1
 
-    def heal(self, ):
+    def heal(self):
         if self.hp > 90:
             self.hp = 100
         else:
